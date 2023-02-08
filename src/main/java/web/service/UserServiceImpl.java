@@ -18,11 +18,6 @@ public class UserServiceImpl implements UserService {
         this.userDAO = userDAO;
     }
 
-    @Override
-    @Transactional
-    public void saveUser(User user) {
-        userDAO.saveUser(user);
-    }
 
     @Override
     public List<User> getAllUsers() {

@@ -25,6 +25,7 @@ public class UserDaoImpl implements UserDAO {
 
     @Override
     public User getUserById(int id) {
+//        System.out.println(entityManager.find(User.class, id));
         return entityManager.find(User.class, id);
     }
 
@@ -48,11 +49,6 @@ public class UserDaoImpl implements UserDAO {
         searchUser.setPassword(user.getPassword());
         searchUser.setRoles(user.getRoles());
 
-    }
-
-    @Override
-    public void saveUser(User user) {
-        entityManager.persist(user);
     }
 
 }
