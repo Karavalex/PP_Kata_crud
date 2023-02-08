@@ -34,8 +34,9 @@ public class UserController {
 		model.addAttribute("user", new User());
 		return "new";
 	}
-	@DeleteMapping("/{id}")
+	@DeleteMapping("/delete/{id}")
 	public String removeUser(@PathVariable("id") int id) {
+		System.out.println(userService.getUserById(id));
 		userService.removeUser(id);
 		return "redirect:/";
 	}
