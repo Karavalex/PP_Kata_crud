@@ -7,8 +7,7 @@
 
 </head>
 <body>
-<!--<form th:method="PATH" th:action="@{/{id}(id=${user.getId()})}" th:object="${user}">-->
-<form action="#" th:method="PATCH" th:action="@{/edit}" th:object="${user}">
+<form action="#" th:method="GET" th:action="@{/saveUser}" th:object="${user}">
   <div class="form-group">
     <label for="name">Введите имя: </label>
     <input type="text" th:field="*{name}" id="name" class="form-control"/>
@@ -22,22 +21,25 @@
   <div class="form-group">
     <label for="age">Введите возраст: </label>
     <input type="text" th:field="*{age}" id="age" class="form-control"/>
-    <br/>
   </div>
+  <br/>>
   <div class="form-group">
     <label for="email">Введите email: </label>
     <input type="text" th:field="*{email}" id="email" class="form-control"/>
-    <br/>
   </div>
+  <br/>
   <div class="form-group">
     <label for="password">Введите пароль: </label>
     <input type="text" th:field="*{password}" id="password" class="form-control"/>
+  </div>
     <br/>
   <div class="form-group">
     <label for="roles">Введите  должность: </label>
     <input type="text" th:field="*{roles}" id="roles" class="form-control"/>
+  </div>
     <br/>
-    <input type="submit" value="Update user" class="btn btn-primary"/>
+  </div>
+    <input type="submit" value="Обновить данные" class="btn btn-primary"/>
   </div>
 </form>
 </body>

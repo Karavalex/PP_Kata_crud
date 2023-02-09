@@ -52,7 +52,7 @@ public class UserController {
         return "/edit";
     }
 
-    @PostMapping("/saveUser")
+    @GetMapping("/saveUser")
     public String saveUser(@ModelAttribute("user") User user) {
         userService.addUser(user);
         return "redirect:/";
