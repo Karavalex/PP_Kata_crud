@@ -45,7 +45,6 @@ public class UserDaoImpl implements UserDAO {
         searchUser.setName(user.getName());
         searchUser.setPassword(user.getPassword());
         searchUser.setRoles(user.getRoles());
-
     }
 
 }
