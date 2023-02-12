@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org" lang="en">
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,7 +7,7 @@
 
 </head>
 <body>
-<form action="#" th:method="GET" th:action="@{/saveUser}" th:object="${user}">
+<form action="#" th:method="GET" th:action="@{/updateUser}" th:object="${user}">
   <div class="form-group">
     <label for="name">Введите имя: </label>
     <input type="text" th:field="*{name}" id="name" class="form-control"/>
