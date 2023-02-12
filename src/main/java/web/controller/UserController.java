@@ -33,26 +33,26 @@ public class UserController {
         return "new";
     }
 
-    @GetMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public String removeUser(@PathVariable("id") int id) {
         userService.removeUser(id);
         return "redirect:/";
     }
 
-    @GetMapping("/{id}/updateUser")
+    @PatchMapping("/users/{id}")
     public String updateUser(@ModelAttribute("user") User user , @PathVariable("id") int id) {
         userService.updateUser(id , user);
         return "redirect:/";
 
     }
 
-    @GetMapping("/{id}/edit")
+    @GetMapping("/edit/{id}")
     public String edit(Model model , @PathVariable("id") int id) {
         model.addAttribute("user" , userService.getUserById(id));
         return "/edit";
     }
 
-    @GetMapping("/saveUser")
+  @PostMapping("/saveUser")
     public String saveUser(@ModelAttribute("user") User user) {
         userService.addUser(user);
         return "redirect:/";

@@ -6,7 +6,7 @@
   <title>Добавление пользователя</title>
 </head>
 <body>
-<form th:method="GET" th:action="@{/saveUser}" th:object="${user}">
+<form th:method="POST" th:action="@{/saveUser}" th:object="${user}">
   <div class="form-group">
     <label for="name">Введите имя: </label>
     <input type="text" th:field="*{name}" id="name" class="form-control"/>

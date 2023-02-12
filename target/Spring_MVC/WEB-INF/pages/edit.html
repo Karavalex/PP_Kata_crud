@@ -7,7 +7,7 @@
 
 </head>
 <body>
-<form action="#" th:method="GET" th:action="@{/updateUser}" th:object="${user}">
+<form action="#" th:method="PATCH" th:action="@{/users/{id}(id=${user.getId()})}" th:object="${user}">
   <div class="form-group">
     <label for="name">Введите имя: </label>
     <input type="text" th:field="*{name}" id="name" class="form-control"/>

@@ -31,10 +31,10 @@
             <td th:text="${user.getPassword()}">Password</td>
             <td th:text="${user.getRoles()}">Roles</td>
             <td>
-                <form th:method="GET" th:action="@{delete/{id}(id=${user.getId()})}">
+                <form th:method="DELETE" th:action="@{/{id}(id=${user.getId()})}">
                     <input type="submit" value="Удаление пользователя" class="btn btn-primary"/>
                 </form>
-                <form th:action="@{/{id}/edit(id=${user.getId()})}">
+                <form th:action="@{/edit/{id}(id=${user.getId()})}">
                     <input type="submit" value="Редактирование пользователя" class="btn btn-primary"/>
                 </form>
 
